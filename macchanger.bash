@@ -7,6 +7,7 @@
 VERSION="1.0"
 # Intro 
 echo "Welcome to macchanger for macOS v"$VERSION""
+echo "Which interface are you using (ex. en1,...)?"
 read userInterface
 # Sniffing up the permanent MAC
 PERMANENT="$(ifconfig "$userInterface" | grep ether | awk -F " " '{print $2}')"
