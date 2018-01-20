@@ -35,7 +35,7 @@ if [ "$userOption" == "a" ]; then
 elif [ "$userOption" == "b" ]; then
      echo "What partitioning scheme do you want to use (APM, MBR [default] or GPT)? "
      read partitionScheme
-     echo "Give the format, name and size (%, G, M, tb) for each partition in that order (everything separated by a space)."
+     echo "Give the format, name and size (%, G, M, tb or R) for each partition in that order (everything separated by a space)."
      read partition1F partition1N partition1S partition2F partition2N partition2S
      echo "You have 3 seconds to abort this by hitting control and C at the same time"
      sleep 3
