@@ -4,7 +4,7 @@
 # Author: Henri Cattoire
 
 # Variables
-VERSION="1.0"
+VERSION="1.1"
 # Intro
 echo "Welcome to diskModifier for macOS v"$VERSION""
 # Get the name of the disk the user wants to modify
