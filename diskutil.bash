@@ -20,7 +20,7 @@ echo " b: Partition the disk (2)"
 echo " c: Erase the disk"
 echo " d: Mount/unmount the disk"
 echo " e: Eject the disk"
-echo "Please enter the letter corresponding with your choice (a, b, c or d):"
+echo "Please enter the letter corresponding with your choice (a, b, c, d or e):"
 read userOption
 
 echo
