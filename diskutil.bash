@@ -16,8 +16,8 @@ DISK="/dev/"$chosenDisk""
 echo
 echo "What do you want to do?"
 echo " a: Rename the disk"
-echo " b: Partition the disk"
-echo " c: Erase the disk"
+echo " b: Partition the disk (will erase all data on disk)"
+echo " c: Erase the disk (will erase all data on disk)"
 echo " d: Mount/unmount the disk"
 echo " e: Eject the disk"
 echo "Please enter the letter corresponding with your choice (a, b, c, d or e):"
@@ -37,7 +37,7 @@ elif [ "$userOption" == "b" ]; then
      read numberOfPartitions
      echo "What partitioning scheme do you want to use (APM, MBR [default] or GPT)? "
      read partitionScheme
-     echo "Give the format, name and size (%, G, M, tb) for each partition in that order (everything separated by a space)."
+     echo "Give the format, name and size (%, G, M, tb or R) for each partition in that order (everything separated by a space)."
      read partition1F partition1N partition1S partition2F partition2N partition2S partition3F partition3N partition3S partition4F partition4N partition4S
      echo "You have 3 seconds to abort this by hitting control and C at the same time"
      sleep 3
