@@ -1,5 +1,5 @@
 #! /bin/bash
-# Simple Simple driveMaker for macOS
+# Simple Simple driveMaker for macOS (run with this command: sudo sh pathto/drivemaker.bash)
 # licensed under CC
 # Author: Henri Cattoire inspired by Gregory Conrad (https://gregoryconrad.github.io/#top)
 
