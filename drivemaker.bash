@@ -67,7 +67,7 @@ echo "About to make the bootable drive, you have 5 seconds to abort this by hitt
 sleep 10
 
 echo
-echo "Making your bootable drive, this can take up to 30 minutes"
+echo "Making your bootable drive, this can take up to 60 minutes"
 # Use these commands if you didn’t install homebrew and pv yet (make sure to comment them when using the commands below!)
 sudo -v
 if sudo dd if="$ISOFILE" of="$DISK" bs=4m
