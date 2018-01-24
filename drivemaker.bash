@@ -1,7 +1,7 @@
 #! /bin/bash
 # Simple Simple driveMaker for macOS
 # licensed under CC
-# Author: Henri Cattoire
+# Author: Henri Cattoire inspired by Gregory Conrad (https://gregoryconrad.github.io/#top)
 
 # Variables 
 VERSION="1.1"
