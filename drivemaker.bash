@@ -4,7 +4,7 @@
 # Author: Henri Cattoire
 
 # Variables 
-VERSION="1.0"
+VERSION="1.1"
 DIR="/tmp/driveMaker"
 U_VERSION="16.04.3"
 D_VERSION="9.3.0"
@@ -67,7 +67,10 @@ sleep 10
 
 echo
 echo "Making your bootable drive, this can take up to 30 minutes"
+# Use this command if you didn’t install homebrew and pv yet (make sure to comment it when using the command below!)
 if sudo dd if="$ISOFILE" of="$DISK" bs=4m
+# Uncomment this command when you want to show progress (homebrew [https://brew.sh/] and pv [brew install pv] are needed) 
+#if sudo dd if="$ISOFILE" | pv | sudo dd of="$DISK" bs=4m
 then
 	echo "Drive successfully created!"
 	EXITSTATUS=0
