@@ -10,6 +10,7 @@ U_VERSION="16.04.3"
 D_VERSION="9.3.0"
 K_VERSION="2017.3"
 # Intro 
+echo
 echo "Welcome to driveMaker for macOS v"$VERSION""
 # Make directory where downloaded ISO files go
 rm -r "$DIR" > /dev/null 2>&1
@@ -66,7 +67,6 @@ echo
 echo "About to make the bootable drive, you have 5 seconds to abort this by hitting control and C at the same time"
 sleep 10
 
-echo
 echo "Making your bootable drive, this can take up to 60 minutes"
 # Use this command if you didn’t install homebrew and pv yet (make sure to comment this command when using the command below!)
 if dd if="$ISOFILE" of="$DISK" bs=4m
