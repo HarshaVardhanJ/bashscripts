@@ -12,8 +12,8 @@ K_VERSION="2017.3"
 # Intro 
 echo "Welcome to driveMaker for macOS v"$VERSION""
 # Make directory where downloaded ISO files go
-sudo rm -r "$DIR" > /dev/null 2>&1
-sudo mkdir "$DIR"
+rm -r "$DIR" > /dev/null 2>&1
+mkdir "$DIR"
 cd "$DIR"
 # Prompt for the users drive
 echo "Please enter your drive's name (use the ‘diskutil list‘ command to locate your disk, ex. disk3)?"
@@ -31,17 +31,17 @@ read userOption
 
 echo
 if [ "$userOption" == "a" ]; then
-     sudo curl -L -O http://mirror.pnl.gov/releases/16.04/ubuntu-"$U_VERSION"-desktop-amd64.iso
+     curl -L -O http://mirror.pnl.gov/releases/16.04/ubuntu-"$U_VERSION"-desktop-amd64.iso
      echo
      echo "You will need this ISO file later (use COMMAND + C to copy it):"
      echo "ubuntu-"$U_VERSION"-desktop-amd64.iso"
 elif [ "$userOption" == "b" ]; then
-     sudo curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$D_VERSION"-amd64-netinst.iso
+     curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$D_VERSION"-amd64-netinst.iso
      echo
      echo "You will need this ISO file later (use COMMAND + C to copy it):"
      echo "debian-"$D_VERSION"-amd64-netinst.iso"
 elif [ "$userOption" == "c" ]; then
-     sudo curl -L -O https://cdimage.kali.org/current/kali-linux-"$K_VERSION"-amd64.iso
+     curl -L -O https://cdimage.kali.org/current/kali-linux-"$K_VERSION"-amd64.iso
      echo
      echo "You will need this ISO file later (use COMMAND + C to copy it):"
      echo "kali-linux-"$K_VERSION"-amd64.iso"
@@ -68,12 +68,10 @@ sleep 10
 
 echo
 echo "Making your bootable drive, this can take up to 60 minutes"
-# Use these commands if you didn’t install homebrew and pv yet (make sure to comment them when using the commands below!)
-sudo -v
-if sudo dd if="$ISOFILE" of="$DISK" bs=4m
-# Uncomment these two commands when you want to show progress (homebrew [https://brew.sh/] and pv [brew install pv] are needed) 
-#sudo -v
-#if sudo dd if="$ISOFILE" | pv | sudo dd of="$DISK" bs=4m
+# Use this command if you didn’t install homebrew and pv yet (make sure to comment this command when using the command below!)
+if dd if="$ISOFILE" of="$DISK" bs=4m
+# Uncomment this command when you want to show progress (homebrew [https://brew.sh/] and pv [brew install pv] are needed) 
+#if dd if="$ISOFILE" | pv | dd of="$DISK" bs=4m
 then
 	echo "Drive successfully created!"
 	EXITSTATUS=0
@@ -83,5 +81,5 @@ else
 fi
 
 # Cleaning up the application
-sudo rm -r "$DIR"
+rm -r "$DIR"
 echo "Quitting the application, hope to see you again soon!"  
