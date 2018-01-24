@@ -53,6 +53,7 @@ echo
 echo "Which distribution did you downloaded (use COMMAND + V to paste it)?"
 read downloadedISO
 ISOFILE="$downloadedISO"
+echo
 echo "Unmounting your disk"
 if ! diskutil unmountDisk "$DISK"
 then
