@@ -70,7 +70,7 @@ fi
 
 echo
 echo "About to make the bootable drive, you have 5 seconds to abort this by hitting control and C at the same time"
-sleep 10
+sleep 5
 
 echo "Making your bootable drive, this can take up to 60 minutes"
 # Use this command if you didn’t install homebrew and pv yet (make sure to comment this command when using the command below!)
