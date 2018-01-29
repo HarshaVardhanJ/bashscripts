@@ -24,12 +24,8 @@ if [ -f $userFile ] ; then
       *.rar)       rar x $userFile ;;
       *.gz)        gunzip $userFile ;;
       *.tar)       tar xvf $userFile ;;
-      *.tbz2)      tar xjf $userFile ;;
-      *.tgz)       tar xzf $userFile ;;
       *.zip)       unzip $userFile ;;
       *.Z)         uncompress $userFile ;;
-      *.7z)        7za x $userFile ;;
-      *.xz)        xz -d $userFile ;;
     esac
     echo "File successfully extracted (you can find it in your downloads folder)!"
     echo "Quitting the application, hope to see you again soon!"
