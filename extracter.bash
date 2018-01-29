@@ -35,4 +35,5 @@ if [ -f $userFile ] ; then
     echo "Quitting the application, hope to see you again soon!"
 else
    echo "fileExtracter can’t extract this file, please try again (check your path) or contact me (henricattoire0@gmail.com)"
+   echo "Quitting the application, hope to see you again soon!"
 fi
