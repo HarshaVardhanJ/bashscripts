@@ -27,7 +27,8 @@ echo "OS choice:"
 echo " a: Ubuntu v"$U_VERSION""
 echo " b: Debian v"$D_VERSION""
 echo " c: Kali v"$K_VERSION""
-echo "Please enter the letter corresponding with your choice (a, b or c):"
+echo " d: Other (You’ll have to provide a path to the ISO file)"
+echo "Please enter the letter corresponding with your choice (a, b, c or d):"
 read userOption
 
 echo
@@ -46,9 +47,13 @@ elif [ "$userOption" == "c" ]; then
      echo
      echo "You will need this ISO file later (use COMMAND + C to copy it):"
      echo "kali-linux-"$K_VERSION"-amd64.iso"
-     
+elif [ "$userOption" == "d" ]; then
+     echo "Where is the ISO file located? You will have to provide the path or you can just drag and drop the file here."
+     read ISOfile
+     echo
+     echo "You will need this ISO file later (use COMMAND + C to copy it):"
+     echo "$ISOfile"       
 fi
-	
 
 echo
 echo "Which distribution did you downloaded (use COMMAND + V to paste it)?"
@@ -81,5 +86,5 @@ else
 fi
 
 # Cleaning up the application
-rm -r "$DIR"
+sudo rm -r "$DIR"
 echo "Quitting the application, hope to see you again soon!"  
