@@ -9,8 +9,8 @@ VERSION="1.0"
 echo "Welcome to macchanger for macOS v"$VERSION""
 echo "Which interface are you using?"
 read userInterface
-# Sniffing up the permanent MAC
-PERMANENT="$(ifconfig "$userInterface" | grep ether | awk -F " " '{print $2}')"
+# Sniffing up the old MAC (only useful for option a and b)
+OLD="$(ifconfig "$userInterface" | grep ether | awk -F " " '{print $2}')"
 # Main 
 echo
 echo "What do you want to do?"
@@ -25,6 +25,7 @@ if [ "$userOption" == "a" ]; then
     OUTPUT="$(ifconfig "$userInterface" | grep ether | awk -F " " '{print $2}')"
     echo
     echo "Current MAC: "$OUTPUT""
+    
 elif [ "$userOption" == "b" ]; then
     echo "To which MAC do you want to change?"
     read newMac
@@ -37,7 +38,7 @@ elif [ "$userOption" == "b" ]; then
     OUTPUT="$(ifconfig "$userInterface" | grep ether | awk -F " " '{print $2}')"
     echo
     echo "Current MAC: "$OUTPUT""
-    echo "Permanent MAC: "$PERMANENT""
+    echo "Old MAC: "$OLD""
      
 elif [ "$userOption" == "c" ]; then
      echo "You have 5 seconds to abort this by hitting control and C at the same time"
@@ -49,5 +50,5 @@ elif [ "$userOption" == "c" ]; then
      OUTPUT="$(ifconfig "$userInterface" | grep ether | awk -F " " '{print $2}')"
      echo
      echo "Current MAC: "$OUTPUT""
-     echo "Permanent MAC: "$PERMANENT""
+     echo "Old MAC: "$OLD""
 fi    
