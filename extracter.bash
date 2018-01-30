@@ -1,7 +1,7 @@
 #! /bin/bash
 # Simple fileExtracter for macOS
 # licensed under CC
-# Author: Henri Cattoire
+# Author: Henri Cattoire inspired by tatumc (https://www.reddit.com/user/tatumc)
 
 # Variables 
 VERSION="1.0"
@@ -24,15 +24,12 @@ if [ -f $userFile ] ; then
       *.rar)       rar x $userFile ;;
       *.gz)        gunzip $userFile ;;
       *.tar)       tar xvf $userFile ;;
-      *.tbz2)      tar xjf $userFile ;;
-      *.tgz)       tar xzf $userFile ;;
       *.zip)       unzip $userFile ;;
       *.Z)         uncompress $userFile ;;
-      *.7z)        7za x $userFile ;;
-      *.xz)        xz -d $userFile ;;
     esac
     echo "File successfully extracted (you can find it in your downloads folder)!"
     echo "Quitting the application, hope to see you again soon!"
 else
    echo "fileExtracter can’t extract this file, please try again (check your path) or contact me (henricattoire0@gmail.com)"
+   echo "Quitting the application, hope to see you again soon!"
 fi
