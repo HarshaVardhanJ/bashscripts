@@ -1,7 +1,7 @@
 #! /bin/bash
 # Simple fileExtracter for macOS
 # licensed under CC
-# Author: Henri Cattoire inspired by tatumc (https://www.reddit.com/user/tatumc)
+# Author: Henri Cattoire
 
 # Variables 
 VERSION="1.0"
