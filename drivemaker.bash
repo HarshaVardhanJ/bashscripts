@@ -4,7 +4,7 @@
 # Author: Henri Cattoire inspired by Gregory Conrad (https://gregoryconrad.github.io/#top)
 
 # Variables 
-VERSION="1.1"
+VERSION="1.2"
 DIR="/tmp/driveMaker"
 U_VERSION="16.04.3"
 D_VERSION="9.3.0"
@@ -21,7 +21,7 @@ echo "Please enter your drive's name (use the ‘diskutil list‘ command to loc
 read chosenDisk
 # Make proper variable of chosenDisk
 DISK="/dev/"$chosenDisk""
-
+# Downloading the ISO (or providing the path to the downloaded ISO)
 echo
 echo "OS choice:"
 echo " a: Ubuntu v"$U_VERSION""
@@ -60,6 +60,15 @@ echo "Which distribution did you downloaded (use COMMAND + V to paste it)?"
 read downloadedISO
 ISOFILE="$downloadedISO"
 echo
+# Preparing the disk
+echo "Erasing your disk and setting its format to MS-DOS, you have 5 second to abort this by hitting command and C"
+sleep 5
+if ! diskutil eraseDisk MS-DOS "BOOT" "$DISK"
+then
+	echo "Oops, something went wrong, we couldn’t erase your disk!"
+	echo "Application will quit, please try again or contact me (henricattoire0@gmail.com)"
+	exit 3
+fi
 echo "Unmounting your disk"
 if ! diskutil unmountDisk "$DISK"
 then
@@ -67,11 +76,8 @@ then
 	echo "Application will quit, please try again or contact me (henricattoire0@gmail.com)"
 	exit 3
 fi
-
+# Making the bootable drive
 echo
-echo "About to make the bootable drive, you have 5 seconds to abort this by hitting control and C at the same time"
-sleep 5
-
 echo "Making your bootable drive, this can take up to 60 minutes"
 # Use this command if you didn’t install homebrew and pv yet (make sure to comment this command when using the command below!)
 #if dd if="$ISOFILE" of="$DISK" bs=4m
