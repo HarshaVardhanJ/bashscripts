@@ -80,9 +80,9 @@ fi
 echo
 echo "Making your bootable drive, this can take up to 60 minutes"
 # Use this command if you didn’t install homebrew and pv yet (make sure to comment this command when using the command below!)
-#if dd if="$ISOFILE" of="$DISK" bs=4m
+if dd if="$ISOFILE" of="$DISK" bs=4m
 # Uncomment this command when you want to show progress (homebrew [https://brew.sh/] and pv [brew install pv] are needed) 
-if dd if="$ISOFILE" | pv | dd of="$DISK" bs=4m
+#if dd if="$ISOFILE" | pv | dd of="$DISK" bs=4m
 then
 	echo "Drive successfully created!"
 	EXITSTATUS=0
