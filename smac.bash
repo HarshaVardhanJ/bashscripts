@@ -4,7 +4,7 @@
 # Author: Henri Cattoire
 
 
-# Sniffing up the old MAC (only useful for option a and b)
+# Sniffing up the old MAC
 OLD="$(ifconfig userInterface | grep ether | awk -F " " '{print $2}')"
 # Main
 sudo ifconfig userInterface ether newMac
