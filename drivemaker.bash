@@ -5,15 +5,15 @@
 
 # Variables 
 DIR="/tmp/driveMaker"
-D_VERSION="VERSION" # Change the version to the current version of the desired distro (ex. 2017.3 for Kali Linux)
+D_VERSION="9.3.0" # Change 9.3.0 to the current version of the desired distro
 # Make directory where downloaded ISO files go
 rm -r "$DIR" > /dev/null 2>&1
 mkdir "$DIR"
 cd "$DIR"
 # Make proper variable of your disk (please change chosenDisk to your disk, ex. disk3)
 DISK="/dev/chosenDisk"
-# Downloading the ISO (change downloadLink to desired link, ex. curl -L -O https://cdimage.kali.org/current/kali-linux-"D_VERSION"-amd64.iso)
-curl -L -O downloadLink
+# Downloading the ISO (change downloadLink to desired link, ex. curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$D_VERSION"-amd64-netinst.iso)
+curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$DEBIAN_VERSION"-amd64-netinst.iso
 ISOFILE="$(ls | grep .iso)"
 # Preparing the disk
 echo
