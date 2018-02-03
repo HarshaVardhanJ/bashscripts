@@ -1,11 +1,9 @@
 #! /bin/bash
-# Quickly unzip a file located in the downloads folder (or any other folder)
+# Quickly unzip a file located in the downloads directory (or any other directory)
 # licensed under CC
 # Author: Henri Cattoire
 
-# Variables 
-DIR="1.0"
-# Sniffing up the active user
+# Sniffing up the active user and going to the specified directory
 userName="$(id -un)"
 cd /Users/"$userName"/Downloads
 # Main
