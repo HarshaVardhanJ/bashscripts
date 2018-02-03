@@ -10,7 +10,7 @@ rm -r "$DIR" > /dev/null 2>&1
 mkdir "$DIR"
 cd "$DIR"
 # Make proper variable of your disk (please change chosenDisk to your disk, ex. disk3)
-DISK="/dev/disk3"
+DISK="/dev/chosenDisk"
 # Downloading the ISO (change the url to download the ISO you want)
 curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$D_VERSION"-amd64-netinst.iso
 ISOFILE="$(ls | grep .iso)"
