@@ -1,6 +1,5 @@
 #! /bin/bash
 # Set random MAC address (you can change en1 [wifi] to whatever interface you want)
-# licensed under CC
 # Author: Henri Cattoire
 
 # Sniffing up the old MAC
