@@ -3,7 +3,7 @@
 # licensed under CC
 # Author: Henri Cattoire
 
-# Sniffing up the active user
+# Sniffing up the active user going to the specified folder
 userName="$(id -un)"
 cd /Users/"$userName"/Downloads
 # Main
