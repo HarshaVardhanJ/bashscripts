@@ -1,6 +1,5 @@
 #! /bin/bash
 # Clean up a directory (you can change the downloads directory to whatever directory you want)
-# licensed under CC
 # Author: Henri Cattoire
 
 # Sniffing up the active user
