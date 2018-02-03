@@ -5,18 +5,15 @@
 
 # Variables 
 DIR="/tmp/driveMaker"
-D_VERSION="version" # Change the version to the current version of the desired distro
+D_VERSION="VERSION" # Change the version to the current version of the desired distro (ex. 2017.3 for Kali Linux)
 # Make directory where downloaded ISO files go
 rm -r "$DIR" > /dev/null 2>&1
 mkdir "$DIR"
 cd "$DIR"
 # Make proper variable of your disk (please change chosenDisk to your disk, ex. disk3)
 DISK="/dev/chosenDisk"
-# Downloading the ISO 
-#Ubuntu: http://mirror.pnl.gov/releases/16.04/ubuntu-"D_VERSION"-desktop-amd64.iso (current version: 16.04.3)
-#Debian: https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"D_VERSION"-amd64-netinst.iso (current version: 9.3.0)
-#Kali: https://cdimage.kali.org/current/kali-linux-"D_VERSION"-amd64.iso (current version: 2017.3)
-curl -L -O linktoDownload
+# Downloading the ISO (change downloadLink to desired link, ex. curl -L -O https://cdimage.kali.org/current/kali-linux-"D_VERSION"-amd64.iso)
+curl -L -O downloadLink
 ISOFILE="$(ls | grep .iso)"
 # Preparing the disk
 echo
