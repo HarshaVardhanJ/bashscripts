@@ -1,6 +1,5 @@
 #! /bin/bash
 # Quickly unzip a file located in the downloads directory (or any other directory)
-# licensed under CC
 # Author: Henri Cattoire
 
 # Sniffing up the active user and going to the specified directory
