@@ -1,5 +1,5 @@
 #! /bin/bash
-# Set specific MAC address (you change en1 [wifi] to whatever interface you want and 00:50:56:64:d1:6a to the wanted MAC address)
+# Set specific MAC address (you can change en1 [wifi] to whatever interface you want and 00:50:56:64:d1:6a to the wanted MAC address)
 # licensed under CC
 # Author: Henri Cattoire
 
