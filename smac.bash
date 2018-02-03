@@ -3,7 +3,6 @@
 # licensed under CC
 # Author: Henri Cattoire
 
-
 # Sniffing up the old MAC
 OLD="$(ifconfig userInterface | grep ether | awk -F " " '{print $2}')"
 # Main
