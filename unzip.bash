@@ -6,8 +6,7 @@
 userName="$(id -un)"
 cd /Users/"$userName"/Downloads
 # Main
-userFile="$(find ./ -name \*.zip -exec unzip {} \;)"
-unzip $userFile
+find ./ -name \*.zip -exec unzip {} \;
 # Cleaning everything up 
 rm -r *.zip > /dev/null 2>&1
 rm -r __MACOSX > /dev/null 2>&1
