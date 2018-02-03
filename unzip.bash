@@ -3,8 +3,6 @@
 # licensed under CC
 # Author: Henri Cattoire
 
-# Variables 
-DIR="1.0"
 # Sniffing up the active user
 userName="$(id -un)"
 cd /Users/"$userName"/Downloads
