@@ -1,7 +1,8 @@
 #! /bin/bash
 # Simple driveMaker for macOS (run with root privileges)
 # Author: Henri Cattoire inspired by Gregory Conrad (https://gregoryconrad.github.io/#top)
-
+# TO BE CHANGED IF EXECUTED ON VOLUME INSTEAD OF THE ENTIRE DISK (1)
+ 
 # Variables 
 DIR="/tmp/driveMaker"
 D_VERSION="9.3.0" # Change 9.3.0 to the current version of the desired distro
@@ -9,7 +10,7 @@ D_VERSION="9.3.0" # Change 9.3.0 to the current version of the desired distro
 rm -r "$DIR" > /dev/null 2>&1
 mkdir "$DIR"
 cd "$DIR"
-# Make proper variable of your disk (please change chosenDisk to your disk, ex. disk3)
+# Make proper variable of your disk (please change to the desired disk, ex. disk3)
 DISK="/dev/disk3"
 # Downloading the ISO (change the url to download the ISO you want)
 curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$D_VERSION"-amd64-netinst.iso
@@ -22,9 +23,9 @@ IMGFILE="$(ls | grep .img.dmg)"
 echo
 echo "Erasing your disk and setting its format to MS-DOS, you have 5 second to abort this by hitting command and C"
 sleep 5
-diskutil eraseDisk MS-DOS "BOOT" "$DISK"
+diskutil eraseDisk MS-DOS "BOOT" "$DISK" # Change to diskutil eraseVolume "$DISK" if using (1)
 echo "Unmounting your disk"
-diskutil unmountDisk "$DISK"
+diskutil unmountDisk "$DISK" # Change to diskutil unmount "$DISK" if using (1)
 # Making the bootable drive
 echo
 echo "Making your bootable drive, this can take up to 60 minutes"
