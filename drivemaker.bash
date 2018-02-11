@@ -10,8 +10,8 @@ D_VERSION="9.3.0" # Change 9.3.0 to the current version of the desired distro
 rm -r "$DIR" > /dev/null 2>&1
 mkdir "$DIR"
 cd "$DIR"
-# Make proper variable of your disk (please change to the desired disk, ex. disk3)
-DISK="/dev/disk3"
+# Make proper variable of your disk (please change yourDisk to the desired disk, ex. disk3)
+DISK="/dev/yourDisk"
 # Downloading the ISO (change the url to download the ISO you want)
 curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$D_VERSION"-amd64-netinst.iso
 ISOFILE="$(ls | grep .iso)"
