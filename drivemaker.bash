@@ -16,7 +16,7 @@ curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"
 ISOFILE="$(ls | grep .iso)"
 # Converting ISO file to IMG file (only useful to make a liveUSB, comment these lines out when going for full install)
 TEMPFILE="$(ls | grep .iso | sed "s@.iso@.img@g")"
-hdiutil convert -format UDRW -o "$TEMPFILE" "$ISOFILE"
+hdiutil convert -format UDRW -o $TEMPFILE $ISOFILE
 IMGFILE="$(ls | grep .img.dmg)"
 # Preparing the disk
 echo
