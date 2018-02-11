@@ -29,9 +29,9 @@ diskutil unmountDisk "$DISK"
 echo
 echo "Making your bootable drive, this can take up to 60 minutes"
 # Use this command if you didn’t install homebrew and pv yet (make sure to comment this command when using the command below!)
-#dd if="$IMGFILE" of="$DISK" bs=4m
+dd if="$IMGFILE" of="$DISK" bs=4m
 # Uncomment this command when you want to show progress (homebrew [https://brew.sh/] and pv [brew install pv] are needed) 
-dd if="$IMGFILE" | pv | dd of="$DISK" bs=4m
+#dd if="$IMGFILE" | pv | dd of="$DISK" bs=4m
 # Cleaning up the application and ejecting the disk
 rm -r "$DIR"
 diskutil eject "$DISK"
