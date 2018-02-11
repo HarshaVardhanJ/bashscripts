@@ -1,6 +1,6 @@
 #! /bin/bash
 # Simple bash script to start up openvpn and run it with vpnbook (you can install openvpn using homebrew [brew install openvpn])
-# Author: Henri Cattoire
+# Author: Henri Cattoire inspired by Rob Seder (https://gist.github.com/RobSeder)
 # TO BE CHANGED: username (to find out yours, just use this command: id -un)
 
 # Variables
