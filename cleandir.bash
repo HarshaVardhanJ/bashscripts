@@ -11,4 +11,5 @@ rm /Users/"$userName"/Downloads/*
 #if [[ $REPLY =~ ^[Yy]$ ]]
 #then
 #rm /Users/"$userName"/Downloads/*
+#echo "Directory cleaned!"
 #fi
