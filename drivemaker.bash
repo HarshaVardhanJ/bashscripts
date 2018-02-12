@@ -23,7 +23,7 @@ IMGFILE="$(ls | grep .img.dmg)"
 echo
 echo "Erasing your disk and setting its format to MS-DOS, you have 5 second to abort this by hitting command and C"
 sleep 5
-diskutil eraseDisk MS-DOS "BOOT" "$DISK" # Change to diskutil eraseVolume "$DISK" if using (1)
+diskutil eraseDisk MS-DOS "BOOT" "$DISK" # Change to diskutil eraseVolume MS-DOS "BOOT" "$DISK" if using (1)
 echo "Unmounting your disk"
 diskutil unmountDisk "$DISK" # Change to diskutil unmount "$DISK" if using (1)
 # Making the bootable drive
