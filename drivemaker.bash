@@ -5,7 +5,7 @@
  
 # Variables 
 DIR="/tmp/driveMaker"
-D_VERSION="16.04.3" # Change 9.3.0 to the current version of the desired distro
+D_VERSION="16.04.3" # Change 16.04.3 to the current version of the desired distro
 # Make directory where downloaded ISO files go
 rm -r "$DIR" > /dev/null 2>&1
 mkdir "$DIR"
