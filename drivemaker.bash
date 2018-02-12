@@ -5,7 +5,7 @@
  
 # Variables 
 DIR="/tmp/driveMaker"
-D_VERSION="9.3.0" # Change 9.3.0 to the current version of the desired distro
+D_VERSION="16.04.3" # Change 9.3.0 to the current version of the desired distro
 # Make directory where downloaded ISO files go
 rm -r "$DIR" > /dev/null 2>&1
 mkdir "$DIR"
@@ -13,7 +13,7 @@ cd "$DIR"
 # Make proper variable of your disk (please change yourDisk to the desired disk, ex. disk3)
 DISK="/dev/yourDisk"
 # Downloading the ISO (change the url to download the ISO you want)
-curl -L -O https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-"$D_VERSION"-amd64-netinst.iso
+curl -L -O http://releases.ubuntu.com/"$D_VERSION"/ubuntu-"$D_VERSION"-desktop-amd64.iso
 ISOFILE="$(ls | grep .iso)"
 # Converting ISO file to IMG file (only useful to make a liveUSB, comment these lines out when going for full install)
 TEMPFILE="$(ls | grep .iso | sed "s@.iso@.img@g")"
