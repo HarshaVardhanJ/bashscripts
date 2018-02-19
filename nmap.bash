@@ -1,5 +1,5 @@
 #! /bin/bash
-# Makes and saves .nse scripts (or .lua libraries) in the right directory
+# Makes and saves .nse scripts (or .lua libraries) in the right directory (use the -n flag with as argument the name of the script/lib)
 # Author: Henri Cattoire
 
 while getopts ":n:" opt; do 
