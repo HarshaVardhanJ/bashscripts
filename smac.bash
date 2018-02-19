@@ -2,7 +2,14 @@
 # Set specific MAC address (you can change en1 [wifi] to whatever interface you want and specify the MAC address with a -m flag [sh smac.bash -m 00:50:56:64:d1:6a])
 # Author: Henri Cattoire
 
-# Flag
+# Flags
+while getopts ":h" opt; do
+  case $opt in
+    h)
+      echo "Usage: sh $0 [-m <mac>]" 1>&2
+      exit 1
+  esac
+done
 while getopts ":m:" opt; do
   case $opt in
     m)
