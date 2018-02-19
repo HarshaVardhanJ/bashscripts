@@ -10,6 +10,7 @@ while getopts ":n:" opt; do
       ;;
    esac
 done
+<<<<<<< HEAD
 # Variables
 SCRIPT="${n}" # or LIB="$OPTARG" for libraries
 # Going to the right directory
@@ -18,3 +19,5 @@ cd /usr/local/share/nmap/scripts # or cd /usr/local/share/nmap/nselib for librar
 curl https://svn.nmap.org/nmap/scripts/"$SCRIPT" >> "$SCRIPT" # or curl https://svn.nmap.org/nmap/nselib/"$LIB" >> "$LIB" for libraries
 CHECK="$(find "$SCRIPT")"
 echo "FOLLOWING FILE WAS ADDED: "$SCRIPT"" # or echo "FOLLOWING FILE WAS ADDED: "$LIB""
+=======
+>>>>>>> a20f54dc638bc5b48874f64e5558e33953e4af18
