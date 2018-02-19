@@ -2,7 +2,14 @@
 # Makes and saves .nse scripts (or .lua libraries) in the right directory (use the -n flag with as argument the name of the script/lib)
 # Author: Henri Cattoire
 
-# Flag
+# Flags
+while getopts ":h" opt; do
+  case $opt in
+    h)
+      echo "Usage: sh $0 [-n <name>]" 1>&2
+      exit 1
+  esac
+done
 while getopts ":n:" opt; do 
   case $opt in
     n)
