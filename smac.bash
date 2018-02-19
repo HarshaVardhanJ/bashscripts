@@ -12,7 +12,6 @@ while getopts ":m:" mac; do
 done
 # Variables
 MAC="${m}"
-echo "$MAC"
 INTERFACE="en1"
 # Sniffing up the old MAC
 OLD="$(ifconfig "$INTERFACE" | grep ether | awk -F " " '{print $2}')"
