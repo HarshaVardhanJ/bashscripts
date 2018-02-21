@@ -36,6 +36,3 @@ while read word; do
      exit
   fi
 done < /pathto.txt # Provide the path to your dictionary list here
-
-
-
