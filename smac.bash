@@ -8,8 +8,17 @@ while getopts ":m:" mac; do
     m)
       m=${OPTARG}
       ;;
+    *)
+      echo "Usage: sh smac.bash -m <mac>">&2
+      exit
+      ;;
   esac
 done
+# If statement to quit the script when the -m option isn’t specified 
+if [ -z "$m" ]; then
+   echo "Usage: sh smac.bash -m <mac>">&2
+   exit
+fi
 # Variables
 MAC="${m}"
 INTERFACE="en1"
@@ -24,4 +33,3 @@ OUTPUT="$(ifconfig "$INTERFACE" | grep ether | awk -F " " '{print $2}')"
 echo
 echo "Current MAC: "$OUTPUT""
 echo "Old MAC: "$OLD""
-
