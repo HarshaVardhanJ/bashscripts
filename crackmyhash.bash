@@ -36,5 +36,5 @@ while read word; do
      exit
   fi
 done < /pathto.txt # Provide the path to your dictionary list here
-echo "We weren’t able to crack the hash ("$HASH") with the provided list"
+echo "We weren’t able to crack the hash ("$HASH") with the provided list" # Only executed if no matching hash was found in the list
 exit
