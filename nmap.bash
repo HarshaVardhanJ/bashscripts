@@ -8,8 +8,17 @@ while getopts ":n:" name; do
     n)
       n=${OPTARG}
       ;;
+    *)
+      echo "Usage: sh nmap.bash -n <filename>">&2
+      exit
+      ;;
    esac
 done
+# If statement to quit the script when the -n option isn’t specified 
+if [ -z "$n" ]; then
+   echo "Usage: sh nmap.bash -n <filename>">&2
+   exit
+fi
 # Variables
 SCRIPT="${n}" # or LIB="$OPTARG" for libraries
 # Going to the right directory
